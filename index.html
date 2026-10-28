@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập CSS - Hoàng Văn An</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    h1,
+    h2 {
+      text-align: center;
+      color: #173b57;
+    }
+
+    .hobbies {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    .hobbies li {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .hobbies li:hover {
+      background-color: #dceeff;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Bài tập thực hành CSS</h1>
+    <p>Thông tin cá nhân, bảng điểm và form đăng ký sinh viên</p>
+  </header>
+
+  <main class="page-container">
+
+    <!-- Bài 1: Thông tin cá nhân và sở thích -->
+    <section class="profile section-card">
+      <h2>Thông tin cá nhân</h2>
+
+      <img
+        id="avatar"
+        src="https://sl.bing.net/jOCkjdoyemi"
+        alt="Ảnh đại diện sinh viên"
+      >
+
+      <!-- Inline CSS -->
+      <p>
+        <strong>Họ và tên:</strong>
+        <span style="color: crimson;">Hoàng Văn An</span>
+      </p>
+
+      <p><strong>Mã sinh viên:</strong> 251060103872</p>
+      <p><strong>Lớp:</strong> Thương mại điện tử 02</p>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:hoangvanan08082019@gmail.com">
+          hoangvanan08082019@gmail.com
+        </a>
+      </p>
+
+      <h2>Sở thích</h2>
+      <ul class="hobbies">
+        <li>Đọc sách</li>
+        <li>Nghe nhạc</li>
+        <li>Xem phim</li>
+      </ul>
+    </section>
+
+    <!-- Bài 2: Bảng điểm -->
+    <section class="table-wrapper section-card">
+      <span class="table-badge">BẢNG ĐIỂM</span>
+      <h2>Kết quả học tập</h2>
+
+      <table class="grade-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Môn học</th>
+            <th>Số tín chỉ</th>
+            <th>Điểm</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="center">1</td>
+            <td>Chủ nghĩa khoa học xã hội</td>
+            <td>3</td>
+            <td class="center">8.5</td>
+          </tr>
+
+          <tr>
+            <td class="center">2</td>
+            <td>Toán cao cấp 2</td>
+            <td>3</td>
+            <td class="center">9.1</td>
+          </tr>
+
+          <tr>
+            <td class="center">3</td>
+            <td>Xác suất thống kê</td>
+            <td>3</td>
+            <td class="center">9.0</td>
+          </tr>
+
+          <tr class="average-row">
+            <td colspan="3">Điểm trung bình</td>
+            <td class="center">8.87</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bài 3: Form đăng ký -->
+    <section class="form-section">
+      <form class="registration-form">
+        <span class="form-badge">ĐĂNG KÝ MỚI</span>
+        <h2>Form đăng ký sinh viên</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullname">Họ và tên</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Nhập họ và tên"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Nhập email"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="student-id">Mã sinh viên</label>
+          <input
+            type="text"
+            id="student-id"
+            name="student-id"
+            placeholder="Nhập mã sinh viên"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="class">Lớp</label>
+          <select id="class" name="class">
+            <option value="">-- Chọn lớp --</option>
+            <option value="tmđt-thu-02">
+              Thương mại điện tử thử 02
+            </option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Giới tính</legend>
+          <div class="choice-row">
+            <label>
+              <input type="radio" name="gender" value="nam">
+              Nam
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="nu">
+              Nữ
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="khac">
+              Khác
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Sở thích</legend>
+          <div class="choice-row">
+            <label>
+              <input type="checkbox" name="interest" value="doc-sach">
+              Đọc sách
+            </label>
+
+            <label>
+              <input type="checkbox" name="interest" value="nghe-nhac">
+              Nghe nhạc
+            </label>
+
+            <label>
+              <input type="checkbox" name="interest" value="xem-phim">
+              Xem phim
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="note">Ghi chú</label>
+          <textarea
+            id="note"
+            name="note"
+            rows="4"
+            placeholder="Nhập ghi chú nếu có"
+          ></textarea>
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Đăng ký</button>
+          <button type="reset" class="reset-button">Nhập lại</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
+

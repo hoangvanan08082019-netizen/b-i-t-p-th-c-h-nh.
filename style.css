@@ -1,4 +1,4 @@
-body {/* Định dạng chung */
+/* Định dạng chung */
 * {
   box-sizing: border-box;
 }
@@ -294,4 +294,4 @@ a:hover {
     padding: 0.5rem;
     font-size: 0.9rem;
   }
-}}
+}
